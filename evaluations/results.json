@@ -1,0 +1,1271 @@
+{
+  "configuration": {
+    "model_id": "tomg-group-umd/huginn-0125",
+    "hf_home": "/home/shaharav/vinkerg/shahar_avni_folder/HF_HOME",
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "batch_size": 4,
+    "task_batch_sizes": {
+      "arc_challenge": 128,
+      "gsm8k_cot": 1,
+      "openbookqa": 128,
+      "hellaswag": 128,
+      "winogrande": 128,
+      "mmlu_humanities": 4
+    },
+    "local_files_only": true,
+    "cache_requests": true,
+    "recurrence_values": [
+      32,
+      64
+    ],
+    "seed": 42,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "evaluations": {
+      "arc_challenge": {
+        "num_fewshot": 0,
+        "metric": "acc_norm,none"
+      },
+      "gsm8k_cot": {
+        "num_fewshot": 8,
+        "metric": "exact_match,flexible-extract",
+        "apply_chat_template": true,
+        "fewshot_as_multiturn": true,
+        "system_instruction": "You are a helpful assistant that can assist users with mathematical reasoning."
+      },
+      "openbookqa": {
+        "num_fewshot": 0,
+        "metric": "acc_norm,none"
+      },
+      "hellaswag": {
+        "num_fewshot": 0,
+        "metric": "acc_norm,none"
+      },
+      "winogrande": {
+        "num_fewshot": 0,
+        "metric": "acc,none"
+      },
+      "mmlu_humanities": {
+        "num_fewshot": 5,
+        "metric": "acc,none"
+      }
+    },
+    "tasks_to_run": [
+      "mmlu_humanities"
+    ],
+    "started_at": "2026-11-01T21:10:41.268156+00:00",
+    "model_max_length": 4096,
+    "resumed_at": "2026-11-02T20:18:14.453718+00:00",
+    "finished_at": "2026-11-02T22:40:49.208764+00:00"
+  },
+  "runs": [
+    {
+      "task": "arc_challenge",
+      "recurrence": 1,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.23378839590443687,
+      "batch_size": 128,
+      "elapsed_seconds": 55.47698335908353,
+      "results": {
+        "arc_challenge": {
+          "name": "arc_challenge",
+          "alias": "arc_challenge",
+          "sample_len": 1172,
+          "acc,none": 0.20051194539249148,
+          "acc_stderr,none": 0.011700318050499469,
+          "acc_norm,none": 0.23378839590443687,
+          "acc_norm_stderr,none": 0.01236822537850722
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "arc_challenge",
+      "recurrence": 4,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.28071672354948807,
+      "batch_size": 128,
+      "elapsed_seconds": 40.28650647029281,
+      "results": {
+        "arc_challenge": {
+          "name": "arc_challenge",
+          "alias": "arc_challenge",
+          "sample_len": 1172,
+          "acc,none": 0.24573378839590443,
+          "acc_stderr,none": 0.012581033453730187,
+          "acc_norm,none": 0.28071672354948807,
+          "acc_norm_stderr,none": 0.013131238126975468
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "arc_challenge",
+      "recurrence": 8,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.3447098976109215,
+      "batch_size": 128,
+      "elapsed_seconds": 57.766870418563485,
+      "results": {
+        "arc_challenge": {
+          "name": "arc_challenge",
+          "alias": "arc_challenge",
+          "sample_len": 1172,
+          "acc,none": 0.31313993174061433,
+          "acc_stderr,none": 0.013552671543623438,
+          "acc_norm,none": 0.3447098976109215,
+          "acc_norm_stderr,none": 0.013888816286782117
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "arc_challenge",
+      "recurrence": 16,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.378839590443686,
+      "batch_size": 128,
+      "elapsed_seconds": 91.46419679746032,
+      "results": {
+        "arc_challenge": {
+          "name": "arc_challenge",
+          "alias": "arc_challenge",
+          "sample_len": 1172,
+          "acc,none": 0.33361774744027306,
+          "acc_stderr,none": 0.013778687054176652,
+          "acc_norm,none": 0.378839590443686,
+          "acc_norm_stderr,none": 0.01417591549000027
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "arc_challenge",
+      "recurrence": 32,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.37542662116040953,
+      "batch_size": 128,
+      "elapsed_seconds": 167.12198209017515,
+      "results": {
+        "arc_challenge": {
+          "name": "arc_challenge",
+          "alias": "arc_challenge",
+          "sample_len": 1172,
+          "acc,none": 0.34726962457337884,
+          "acc_stderr,none": 0.013913034529620455,
+          "acc_norm,none": 0.37542662116040953,
+          "acc_norm_stderr,none": 0.014150631435111728
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "arc_challenge",
+      "recurrence": 64,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.3771331058020478,
+      "batch_size": 128,
+      "elapsed_seconds": 313.1443334557116,
+      "results": {
+        "arc_challenge": {
+          "name": "arc_challenge",
+          "alias": "arc_challenge",
+          "sample_len": 1172,
+          "acc,none": 0.3506825938566553,
+          "acc_stderr,none": 0.01394463593072613,
+          "acc_norm,none": 0.3771331058020478,
+          "acc_norm_stderr,none": 0.01416336689619262
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "openbookqa",
+      "recurrence": 1,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.262,
+      "batch_size": 128,
+      "elapsed_seconds": 24.996052272617817,
+      "results": {
+        "openbookqa": {
+          "name": "openbookqa",
+          "alias": "openbookqa",
+          "sample_len": 500,
+          "acc,none": 0.148,
+          "acc_stderr,none": 0.01589645856125128,
+          "acc_norm,none": 0.262,
+          "acc_norm_stderr,none": 0.019684688820194637
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "openbookqa",
+      "recurrence": 4,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.32,
+      "batch_size": 128,
+      "elapsed_seconds": 24.182360572740436,
+      "results": {
+        "openbookqa": {
+          "name": "openbookqa",
+          "alias": "openbookqa",
+          "sample_len": 500,
+          "acc,none": 0.21,
+          "acc_stderr,none": 0.01823362086530592,
+          "acc_norm,none": 0.32,
+          "acc_norm_stderr,none": 0.02088234048876172
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "openbookqa",
+      "recurrence": 8,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.388,
+      "batch_size": 128,
+      "elapsed_seconds": 24.091063529253006,
+      "results": {
+        "openbookqa": {
+          "name": "openbookqa",
+          "alias": "openbookqa",
+          "sample_len": 500,
+          "acc,none": 0.276,
+          "acc_stderr,none": 0.02001121929807355,
+          "acc_norm,none": 0.388,
+          "acc_norm_stderr,none": 0.021814300984787705
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "openbookqa",
+      "recurrence": 16,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.404,
+      "batch_size": 128,
+      "elapsed_seconds": 34.70109536498785,
+      "results": {
+        "openbookqa": {
+          "name": "openbookqa",
+          "alias": "openbookqa",
+          "sample_len": 500,
+          "acc,none": 0.298,
+          "acc_stderr,none": 0.020475118092988954,
+          "acc_norm,none": 0.404,
+          "acc_norm_stderr,none": 0.021966635293832883
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "openbookqa",
+      "recurrence": 32,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.404,
+      "batch_size": 128,
+      "elapsed_seconds": 39.81271726451814,
+      "results": {
+        "openbookqa": {
+          "name": "openbookqa",
+          "alias": "openbookqa",
+          "sample_len": 500,
+          "acc,none": 0.296,
+          "acc_stderr,none": 0.020435342091896222,
+          "acc_norm,none": 0.404,
+          "acc_norm_stderr,none": 0.021966635293832883
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "openbookqa",
+      "recurrence": 64,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.4,
+      "batch_size": 128,
+      "elapsed_seconds": 62.17871763929725,
+      "results": {
+        "openbookqa": {
+          "name": "openbookqa",
+          "alias": "openbookqa",
+          "sample_len": 500,
+          "acc,none": 0.302,
+          "acc_stderr,none": 0.02055326917420912,
+          "acc_norm,none": 0.4,
+          "acc_norm_stderr,none": 0.02193084412072858
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "hellaswag",
+      "recurrence": 1,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.2925712009559849,
+      "batch_size": 128,
+      "elapsed_seconds": 233.67861358262599,
+      "results": {
+        "hellaswag": {
+          "name": "hellaswag",
+          "alias": "hellaswag",
+          "sample_len": 10042,
+          "acc,none": 0.2813184624576778,
+          "acc_stderr,none": 0.0044872356579555165,
+          "acc_norm,none": 0.2925712009559849,
+          "acc_norm_stderr,none": 0.004540134005059956
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "hellaswag",
+      "recurrence": 4,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.463752240589524,
+      "batch_size": 128,
+      "elapsed_seconds": 464.0097172241658,
+      "results": {
+        "hellaswag": {
+          "name": "hellaswag",
+          "alias": "hellaswag",
+          "sample_len": 10042,
+          "acc,none": 0.36656044612626965,
+          "acc_stderr,none": 0.004808802114592677,
+          "acc_norm,none": 0.463752240589524,
+          "acc_norm_stderr,none": 0.004976651989757839
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "hellaswag",
+      "recurrence": 8,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.611431985660227,
+      "batch_size": 128,
+      "elapsed_seconds": 785.9929154869169,
+      "results": {
+        "hellaswag": {
+          "name": "hellaswag",
+          "alias": "hellaswag",
+          "sample_len": 10042,
+          "acc,none": 0.46106353316072496,
+          "acc_stderr,none": 0.004974628903829016,
+          "acc_norm,none": 0.611431985660227,
+          "acc_norm_stderr,none": 0.004864286176731834
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "hellaswag",
+      "recurrence": 16,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.6630153355905198,
+      "batch_size": 128,
+      "elapsed_seconds": 1452.0851143356413,
+      "results": {
+        "hellaswag": {
+          "name": "hellaswag",
+          "alias": "hellaswag",
+          "sample_len": 10042,
+          "acc,none": 0.49422425811591314,
+          "acc_stderr,none": 0.004989448490164142,
+          "acc_norm,none": 0.6630153355905198,
+          "acc_norm_stderr,none": 0.004717135722194396
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "hellaswag",
+      "recurrence": 32,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.6667994423421629,
+      "batch_size": 128,
+      "elapsed_seconds": 2733.5521749816835,
+      "results": {
+        "hellaswag": {
+          "name": "hellaswag",
+          "alias": "hellaswag",
+          "sample_len": 10042,
+          "acc,none": 0.49641505676160125,
+          "acc_stderr,none": 0.004989653154272149,
+          "acc_norm,none": 0.6667994423421629,
+          "acc_norm_stderr,none": 0.004703942346762715
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "hellaswag",
+      "recurrence": 64,
+      "primary_metric": "acc_norm,none",
+      "primary_score": 0.6665006970722963,
+      "batch_size": 128,
+      "elapsed_seconds": 5317.8755496721715,
+      "results": {
+        "hellaswag": {
+          "name": "hellaswag",
+          "alias": "hellaswag",
+          "sample_len": 10042,
+          "acc,none": 0.4971121290579566,
+          "acc_stderr,none": 0.004989698183207902,
+          "acc_norm,none": 0.6665006970722963,
+          "acc_norm_stderr,none": 0.0047049962941451366
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "winogrande",
+      "recurrence": 1,
+      "primary_metric": "acc,none",
+      "primary_score": 0.4996053670086819,
+      "batch_size": 128,
+      "elapsed_seconds": 83.77906923182309,
+      "results": {
+        "winogrande": {
+          "name": "winogrande",
+          "alias": "winogrande",
+          "sample_len": 1267,
+          "acc,none": 0.4996053670086819,
+          "acc_stderr,none": 0.01405248130604961
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "winogrande",
+      "recurrence": 4,
+      "primary_metric": "acc,none",
+      "primary_score": 0.5303867403314917,
+      "batch_size": 128,
+      "elapsed_seconds": 44.50271953642368,
+      "results": {
+        "winogrande": {
+          "name": "winogrande",
+          "alias": "winogrande",
+          "sample_len": 1267,
+          "acc,none": 0.5303867403314917,
+          "acc_stderr,none": 0.014026510839428848
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "winogrande",
+      "recurrence": 8,
+      "primary_metric": "acc,none",
+      "primary_score": 0.5808997632202052,
+      "batch_size": 128,
+      "elapsed_seconds": 42.04112542048097,
+      "results": {
+        "winogrande": {
+          "name": "winogrande",
+          "alias": "winogrande",
+          "sample_len": 1267,
+          "acc,none": 0.5808997632202052,
+          "acc_stderr,none": 0.013867325192210088
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "winogrande",
+      "recurrence": 16,
+      "primary_metric": "acc,none",
+      "primary_score": 0.6053670086819258,
+      "batch_size": 128,
+      "elapsed_seconds": 51.12292309291661,
+      "results": {
+        "winogrande": {
+          "name": "winogrande",
+          "alias": "winogrande",
+          "sample_len": 1267,
+          "acc,none": 0.6053670086819258,
+          "acc_stderr,none": 0.01373691517237188
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "winogrande",
+      "recurrence": 32,
+      "primary_metric": "acc,none",
+      "primary_score": 0.6085240726124704,
+      "batch_size": 128,
+      "elapsed_seconds": 77.36845511943102,
+      "results": {
+        "winogrande": {
+          "name": "winogrande",
+          "alias": "winogrande",
+          "sample_len": 1267,
+          "acc,none": 0.6085240726124704,
+          "acc_stderr,none": 0.01371748707129077
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "winogrande",
+      "recurrence": 64,
+      "primary_metric": "acc,none",
+      "primary_score": 0.6045777426992897,
+      "batch_size": 128,
+      "elapsed_seconds": 126.8680192604661,
+      "results": {
+        "winogrande": {
+          "name": "winogrande",
+          "alias": "winogrande",
+          "sample_len": 1267,
+          "acc,none": 0.6045777426992897,
+          "acc_stderr,none": 0.013741678387545343
+        }
+      },
+      "groups": {}
+    },
+    {
+      "task": "mmlu_humanities",
+      "recurrence": 1,
+      "primary_metric": "acc,none",
+      "primary_score": 0.24888416578108397,
+      "batch_size": 4,
+      "elapsed_seconds": 589.7989403884858,
+      "results": {
+        "mmlu_formal_logic": {
+          "name": "mmlu_formal_logic",
+          "alias": "formal_logic",
+          "sample_len": 126,
+          "acc,none": 0.3253968253968254,
+          "acc_stderr,none": 0.04190596438871138
+        },
+        "mmlu_high_school_european_history": {
+          "name": "mmlu_high_school_european_history",
+          "alias": "high_school_european_history",
+          "sample_len": 165,
+          "acc,none": 0.24848484848484848,
+          "acc_stderr,none": 0.03374402644139407
+        },
+        "mmlu_high_school_us_history": {
+          "name": "mmlu_high_school_us_history",
+          "alias": "high_school_us_history",
+          "sample_len": 204,
+          "acc,none": 0.22058823529411764,
+          "acc_stderr,none": 0.029102254389674065
+        },
+        "mmlu_high_school_world_history": {
+          "name": "mmlu_high_school_world_history",
+          "alias": "high_school_world_history",
+          "sample_len": 237,
+          "acc,none": 0.2489451476793249,
+          "acc_stderr,none": 0.028146970599422644
+        },
+        "mmlu_international_law": {
+          "name": "mmlu_international_law",
+          "alias": "international_law",
+          "sample_len": 121,
+          "acc,none": 0.2066115702479339,
+          "acc_stderr,none": 0.03695980128098826
+        },
+        "mmlu_jurisprudence": {
+          "name": "mmlu_jurisprudence",
+          "alias": "jurisprudence",
+          "sample_len": 108,
+          "acc,none": 0.25925925925925924,
+          "acc_stderr,none": 0.042365112580946315
+        },
+        "mmlu_logical_fallacies": {
+          "name": "mmlu_logical_fallacies",
+          "alias": "logical_fallacies",
+          "sample_len": 163,
+          "acc,none": 0.22085889570552147,
+          "acc_stderr,none": 0.032591773927421734
+        },
+        "mmlu_moral_disputes": {
+          "name": "mmlu_moral_disputes",
+          "alias": "moral_disputes",
+          "sample_len": 346,
+          "acc,none": 0.26878612716763006,
+          "acc_stderr,none": 0.02386800326250009
+        },
+        "mmlu_moral_scenarios": {
+          "name": "mmlu_moral_scenarios",
+          "alias": "moral_scenarios",
+          "sample_len": 895,
+          "acc,none": 0.2558659217877095,
+          "acc_stderr,none": 0.014593620923210763
+        },
+        "mmlu_philosophy": {
+          "name": "mmlu_philosophy",
+          "alias": "philosophy",
+          "sample_len": 311,
+          "acc,none": 0.24437299035369775,
+          "acc_stderr,none": 0.024406162094668955
+        },
+        "mmlu_prehistory": {
+          "name": "mmlu_prehistory",
+          "alias": "prehistory",
+          "sample_len": 324,
+          "acc,none": 0.24074074074074073,
+          "acc_stderr,none": 0.0237885835516586
+        },
+        "mmlu_professional_law": {
+          "name": "mmlu_professional_law",
+          "alias": "professional_law",
+          "sample_len": 1534,
+          "acc,none": 0.23989569752281617,
+          "acc_stderr,none": 0.010906282617981532
+        },
+        "mmlu_world_religions": {
+          "name": "mmlu_world_religions",
+          "alias": "world_religions",
+          "sample_len": 171,
+          "acc,none": 0.30409356725146197,
+          "acc_stderr,none": 0.03528211258245229
+        },
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.24888416578108397,
+          "acc_stderr,none": 0.006304511149313035,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      },
+      "groups": {
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.24888416578108397,
+          "acc_stderr,none": 0.006304511149313035,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      }
+    },
+    {
+      "task": "mmlu_humanities",
+      "recurrence": 4,
+      "primary_metric": "acc,none",
+      "primary_score": 0.23910733262486716,
+      "batch_size": 4,
+      "elapsed_seconds": 1324.2884725034237,
+      "results": {
+        "mmlu_formal_logic": {
+          "name": "mmlu_formal_logic",
+          "alias": "formal_logic",
+          "sample_len": 126,
+          "acc,none": 0.18253968253968253,
+          "acc_stderr,none": 0.03455071019102148
+        },
+        "mmlu_high_school_european_history": {
+          "name": "mmlu_high_school_european_history",
+          "alias": "high_school_european_history",
+          "sample_len": 165,
+          "acc,none": 0.21212121212121213,
+          "acc_stderr,none": 0.03192271569548294
+        },
+        "mmlu_high_school_us_history": {
+          "name": "mmlu_high_school_us_history",
+          "alias": "high_school_us_history",
+          "sample_len": 204,
+          "acc,none": 0.28921568627450983,
+          "acc_stderr,none": 0.031822318676475524
+        },
+        "mmlu_high_school_world_history": {
+          "name": "mmlu_high_school_world_history",
+          "alias": "high_school_world_history",
+          "sample_len": 237,
+          "acc,none": 0.23628691983122363,
+          "acc_stderr,none": 0.027652153144159246
+        },
+        "mmlu_international_law": {
+          "name": "mmlu_international_law",
+          "alias": "international_law",
+          "sample_len": 121,
+          "acc,none": 0.24793388429752067,
+          "acc_stderr,none": 0.03941897526516304
+        },
+        "mmlu_jurisprudence": {
+          "name": "mmlu_jurisprudence",
+          "alias": "jurisprudence",
+          "sample_len": 108,
+          "acc,none": 0.25925925925925924,
+          "acc_stderr,none": 0.042365112580946315
+        },
+        "mmlu_logical_fallacies": {
+          "name": "mmlu_logical_fallacies",
+          "alias": "logical_fallacies",
+          "sample_len": 163,
+          "acc,none": 0.19631901840490798,
+          "acc_stderr,none": 0.031207970394709197
+        },
+        "mmlu_moral_disputes": {
+          "name": "mmlu_moral_disputes",
+          "alias": "moral_disputes",
+          "sample_len": 346,
+          "acc,none": 0.2514450867052023,
+          "acc_stderr,none": 0.023357365785874006
+        },
+        "mmlu_moral_scenarios": {
+          "name": "mmlu_moral_scenarios",
+          "alias": "moral_scenarios",
+          "sample_len": 895,
+          "acc,none": 0.24022346368715083,
+          "acc_stderr,none": 0.01428834380392532
+        },
+        "mmlu_philosophy": {
+          "name": "mmlu_philosophy",
+          "alias": "philosophy",
+          "sample_len": 311,
+          "acc,none": 0.2090032154340836,
+          "acc_stderr,none": 0.02309314039837425
+        },
+        "mmlu_prehistory": {
+          "name": "mmlu_prehistory",
+          "alias": "prehistory",
+          "sample_len": 324,
+          "acc,none": 0.2222222222222222,
+          "acc_stderr,none": 0.023132376234543416
+        },
+        "mmlu_professional_law": {
+          "name": "mmlu_professional_law",
+          "alias": "professional_law",
+          "sample_len": 1534,
+          "acc,none": 0.2405475880052151,
+          "acc_stderr,none": 0.010916406735478877
+        },
+        "mmlu_world_religions": {
+          "name": "mmlu_world_religions",
+          "alias": "world_religions",
+          "sample_len": 171,
+          "acc,none": 0.3157894736842105,
+          "acc_stderr,none": 0.03565079670708305
+        },
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.23910733262486716,
+          "acc_stderr,none": 0.006216717179793678,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      },
+      "groups": {
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.23910733262486716,
+          "acc_stderr,none": 0.006216717179793678,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      }
+    },
+    {
+      "task": "mmlu_humanities",
+      "recurrence": 8,
+      "primary_metric": "acc,none",
+      "primary_score": 0.27523910733262485,
+      "batch_size": 4,
+      "elapsed_seconds": 2207.710237748921,
+      "results": {
+        "mmlu_formal_logic": {
+          "name": "mmlu_formal_logic",
+          "alias": "formal_logic",
+          "sample_len": 126,
+          "acc,none": 0.3253968253968254,
+          "acc_stderr,none": 0.04190596438871138
+        },
+        "mmlu_high_school_european_history": {
+          "name": "mmlu_high_school_european_history",
+          "alias": "high_school_european_history",
+          "sample_len": 165,
+          "acc,none": 0.24242424242424243,
+          "acc_stderr,none": 0.03346409881055956
+        },
+        "mmlu_high_school_us_history": {
+          "name": "mmlu_high_school_us_history",
+          "alias": "high_school_us_history",
+          "sample_len": 204,
+          "acc,none": 0.30392156862745096,
+          "acc_stderr,none": 0.03228210387037892
+        },
+        "mmlu_high_school_world_history": {
+          "name": "mmlu_high_school_world_history",
+          "alias": "high_school_world_history",
+          "sample_len": 237,
+          "acc,none": 0.33755274261603374,
+          "acc_stderr,none": 0.030781549102026285
+        },
+        "mmlu_international_law": {
+          "name": "mmlu_international_law",
+          "alias": "international_law",
+          "sample_len": 121,
+          "acc,none": 0.371900826446281,
+          "acc_stderr,none": 0.044120158066245085
+        },
+        "mmlu_jurisprudence": {
+          "name": "mmlu_jurisprudence",
+          "alias": "jurisprudence",
+          "sample_len": 108,
+          "acc,none": 0.3055555555555556,
+          "acc_stderr,none": 0.044531975073749855
+        },
+        "mmlu_logical_fallacies": {
+          "name": "mmlu_logical_fallacies",
+          "alias": "logical_fallacies",
+          "sample_len": 163,
+          "acc,none": 0.2331288343558282,
+          "acc_stderr,none": 0.03322015795776743
+        },
+        "mmlu_moral_disputes": {
+          "name": "mmlu_moral_disputes",
+          "alias": "moral_disputes",
+          "sample_len": 346,
+          "acc,none": 0.2861271676300578,
+          "acc_stderr,none": 0.024332146779134166
+        },
+        "mmlu_moral_scenarios": {
+          "name": "mmlu_moral_scenarios",
+          "alias": "moral_scenarios",
+          "sample_len": 895,
+          "acc,none": 0.2245810055865922,
+          "acc_stderr,none": 0.01395680366654462
+        },
+        "mmlu_philosophy": {
+          "name": "mmlu_philosophy",
+          "alias": "philosophy",
+          "sample_len": 311,
+          "acc,none": 0.29260450160771706,
+          "acc_stderr,none": 0.02583989833487794
+        },
+        "mmlu_prehistory": {
+          "name": "mmlu_prehistory",
+          "alias": "prehistory",
+          "sample_len": 324,
+          "acc,none": 0.2932098765432099,
+          "acc_stderr,none": 0.02532988817190095
+        },
+        "mmlu_professional_law": {
+          "name": "mmlu_professional_law",
+          "alias": "professional_law",
+          "sample_len": 1534,
+          "acc,none": 0.26988265971316816,
+          "acc_stderr,none": 0.011337381084250461
+        },
+        "mmlu_world_religions": {
+          "name": "mmlu_world_religions",
+          "alias": "world_religions",
+          "sample_len": 171,
+          "acc,none": 0.32748538011695905,
+          "acc_stderr,none": 0.03599335771456024
+        },
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.27523910733262485,
+          "acc_stderr,none": 0.006498995102245045,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      },
+      "groups": {
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.27523910733262485,
+          "acc_stderr,none": 0.006498995102245045,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      }
+    },
+    {
+      "task": "mmlu_humanities",
+      "recurrence": 16,
+      "primary_metric": "acc,none",
+      "primary_score": 0.3538788522848034,
+      "batch_size": 4,
+      "elapsed_seconds": 3970.7289138026536,
+      "results": {
+        "mmlu_formal_logic": {
+          "name": "mmlu_formal_logic",
+          "alias": "formal_logic",
+          "sample_len": 126,
+          "acc,none": 0.3333333333333333,
+          "acc_stderr,none": 0.04216370213557839
+        },
+        "mmlu_high_school_european_history": {
+          "name": "mmlu_high_school_european_history",
+          "alias": "high_school_european_history",
+          "sample_len": 165,
+          "acc,none": 0.4727272727272727,
+          "acc_stderr,none": 0.03898531605579422
+        },
+        "mmlu_high_school_us_history": {
+          "name": "mmlu_high_school_us_history",
+          "alias": "high_school_us_history",
+          "sample_len": 204,
+          "acc,none": 0.47058823529411764,
+          "acc_stderr,none": 0.03503235296367989
+        },
+        "mmlu_high_school_world_history": {
+          "name": "mmlu_high_school_world_history",
+          "alias": "high_school_world_history",
+          "sample_len": 237,
+          "acc,none": 0.4810126582278481,
+          "acc_stderr,none": 0.03252375148090457
+        },
+        "mmlu_international_law": {
+          "name": "mmlu_international_law",
+          "alias": "international_law",
+          "sample_len": 121,
+          "acc,none": 0.47107438016528924,
+          "acc_stderr,none": 0.04556710331269495
+        },
+        "mmlu_jurisprudence": {
+          "name": "mmlu_jurisprudence",
+          "alias": "jurisprudence",
+          "sample_len": 108,
+          "acc,none": 0.3888888888888889,
+          "acc_stderr,none": 0.04712821257426773
+        },
+        "mmlu_logical_fallacies": {
+          "name": "mmlu_logical_fallacies",
+          "alias": "logical_fallacies",
+          "sample_len": 163,
+          "acc,none": 0.4171779141104294,
+          "acc_stderr,none": 0.038741028598180835
+        },
+        "mmlu_moral_disputes": {
+          "name": "mmlu_moral_disputes",
+          "alias": "moral_disputes",
+          "sample_len": 346,
+          "acc,none": 0.42196531791907516,
+          "acc_stderr,none": 0.026589231142174232
+        },
+        "mmlu_moral_scenarios": {
+          "name": "mmlu_moral_scenarios",
+          "alias": "moral_scenarios",
+          "sample_len": 895,
+          "acc,none": 0.21564245810055865,
+          "acc_stderr,none": 0.013754835975482384
+        },
+        "mmlu_philosophy": {
+          "name": "mmlu_philosophy",
+          "alias": "philosophy",
+          "sample_len": 311,
+          "acc,none": 0.4340836012861736,
+          "acc_stderr,none": 0.028150232244535566
+        },
+        "mmlu_prehistory": {
+          "name": "mmlu_prehistory",
+          "alias": "prehistory",
+          "sample_len": 324,
+          "acc,none": 0.4012345679012346,
+          "acc_stderr,none": 0.027272582849839785
+        },
+        "mmlu_professional_law": {
+          "name": "mmlu_professional_law",
+          "alias": "professional_law",
+          "sample_len": 1534,
+          "acc,none": 0.318122555410691,
+          "acc_stderr,none": 0.011895407281103984
+        },
+        "mmlu_world_religions": {
+          "name": "mmlu_world_religions",
+          "alias": "world_religions",
+          "sample_len": 171,
+          "acc,none": 0.4444444444444444,
+          "acc_stderr,none": 0.038110796698335295
+        },
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.3538788522848034,
+          "acc_stderr,none": 0.006862219164500363,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      },
+      "groups": {
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.3538788522848034,
+          "acc_stderr,none": 0.006862219164500363,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      }
+    },
+    {
+      "task": "mmlu_humanities",
+      "recurrence": 32,
+      "primary_metric": "acc,none",
+      "primary_score": 0.3747077577045696,
+      "batch_size": 4,
+      "elapsed_seconds": 4659.367987615988,
+      "results": {
+        "mmlu_formal_logic": {
+          "name": "mmlu_formal_logic",
+          "alias": "formal_logic",
+          "sample_len": 126,
+          "acc,none": 0.3253968253968254,
+          "acc_stderr,none": 0.04190596438871138
+        },
+        "mmlu_high_school_european_history": {
+          "name": "mmlu_high_school_european_history",
+          "alias": "high_school_european_history",
+          "sample_len": 165,
+          "acc,none": 0.4909090909090909,
+          "acc_stderr,none": 0.03903698647748437
+        },
+        "mmlu_high_school_us_history": {
+          "name": "mmlu_high_school_us_history",
+          "alias": "high_school_us_history",
+          "sample_len": 204,
+          "acc,none": 0.49019607843137253,
+          "acc_stderr,none": 0.035086373586305744
+        },
+        "mmlu_high_school_world_history": {
+          "name": "mmlu_high_school_world_history",
+          "alias": "high_school_world_history",
+          "sample_len": 237,
+          "acc,none": 0.4767932489451477,
+          "acc_stderr,none": 0.03251215201141018
+        },
+        "mmlu_international_law": {
+          "name": "mmlu_international_law",
+          "alias": "international_law",
+          "sample_len": 121,
+          "acc,none": 0.4628099173553719,
+          "acc_stderr,none": 0.04551711196104216
+        },
+        "mmlu_jurisprudence": {
+          "name": "mmlu_jurisprudence",
+          "alias": "jurisprudence",
+          "sample_len": 108,
+          "acc,none": 0.42592592592592593,
+          "acc_stderr,none": 0.04780343626936791
+        },
+        "mmlu_logical_fallacies": {
+          "name": "mmlu_logical_fallacies",
+          "alias": "logical_fallacies",
+          "sample_len": 163,
+          "acc,none": 0.4171779141104294,
+          "acc_stderr,none": 0.038741028598180835
+        },
+        "mmlu_moral_disputes": {
+          "name": "mmlu_moral_disputes",
+          "alias": "moral_disputes",
+          "sample_len": 346,
+          "acc,none": 0.4595375722543353,
+          "acc_stderr,none": 0.026830805998952233
+        },
+        "mmlu_moral_scenarios": {
+          "name": "mmlu_moral_scenarios",
+          "alias": "moral_scenarios",
+          "sample_len": 895,
+          "acc,none": 0.24916201117318434,
+          "acc_stderr,none": 0.014465893829859829
+        },
+        "mmlu_philosophy": {
+          "name": "mmlu_philosophy",
+          "alias": "philosophy",
+          "sample_len": 311,
+          "acc,none": 0.42765273311897106,
+          "acc_stderr,none": 0.028099240775809588
+        },
+        "mmlu_prehistory": {
+          "name": "mmlu_prehistory",
+          "alias": "prehistory",
+          "sample_len": 324,
+          "acc,none": 0.4382716049382716,
+          "acc_stderr,none": 0.027607914087400473
+        },
+        "mmlu_professional_law": {
+          "name": "mmlu_professional_law",
+          "alias": "professional_law",
+          "sample_len": 1534,
+          "acc,none": 0.33702737940026073,
+          "acc_stderr,none": 0.012072836273691408
+        },
+        "mmlu_world_religions": {
+          "name": "mmlu_world_religions",
+          "alias": "world_religions",
+          "sample_len": 171,
+          "acc,none": 0.49122807017543857,
+          "acc_stderr,none": 0.038342347441649854
+        },
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.3747077577045696,
+          "acc_stderr,none": 0.0069615668015274735,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      },
+      "groups": {
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.3747077577045696,
+          "acc_stderr,none": 0.0069615668015274735,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      }
+    },
+    {
+      "task": "mmlu_humanities",
+      "recurrence": 64,
+      "primary_metric": "acc,none",
+      "primary_score": 0.375557917109458,
+      "batch_size": 4,
+      "elapsed_seconds": 8553.866170056164,
+      "results": {
+        "mmlu_formal_logic": {
+          "name": "mmlu_formal_logic",
+          "alias": "formal_logic",
+          "sample_len": 126,
+          "acc,none": 0.31746031746031744,
+          "acc_stderr,none": 0.04163453031302857
+        },
+        "mmlu_high_school_european_history": {
+          "name": "mmlu_high_school_european_history",
+          "alias": "high_school_european_history",
+          "sample_len": 165,
+          "acc,none": 0.49696969696969695,
+          "acc_stderr,none": 0.03904272341431856
+        },
+        "mmlu_high_school_us_history": {
+          "name": "mmlu_high_school_us_history",
+          "alias": "high_school_us_history",
+          "sample_len": 204,
+          "acc,none": 0.5,
+          "acc_stderr,none": 0.03509312031717982
+        },
+        "mmlu_high_school_world_history": {
+          "name": "mmlu_high_school_world_history",
+          "alias": "high_school_world_history",
+          "sample_len": 237,
+          "acc,none": 0.5232067510548524,
+          "acc_stderr,none": 0.03251215201141018
+        },
+        "mmlu_international_law": {
+          "name": "mmlu_international_law",
+          "alias": "international_law",
+          "sample_len": 121,
+          "acc,none": 0.4628099173553719,
+          "acc_stderr,none": 0.04551711196104216
+        },
+        "mmlu_jurisprudence": {
+          "name": "mmlu_jurisprudence",
+          "alias": "jurisprudence",
+          "sample_len": 108,
+          "acc,none": 0.4537037037037037,
+          "acc_stderr,none": 0.04812917324536823
+        },
+        "mmlu_logical_fallacies": {
+          "name": "mmlu_logical_fallacies",
+          "alias": "logical_fallacies",
+          "sample_len": 163,
+          "acc,none": 0.4110429447852761,
+          "acc_stderr,none": 0.038656978537853645
+        },
+        "mmlu_moral_disputes": {
+          "name": "mmlu_moral_disputes",
+          "alias": "moral_disputes",
+          "sample_len": 346,
+          "acc,none": 0.45664739884393063,
+          "acc_stderr,none": 0.026817718130348986
+        },
+        "mmlu_moral_scenarios": {
+          "name": "mmlu_moral_scenarios",
+          "alias": "moral_scenarios",
+          "sample_len": 895,
+          "acc,none": 0.2424581005586592,
+          "acc_stderr,none": 0.01433352205921795
+        },
+        "mmlu_philosophy": {
+          "name": "mmlu_philosophy",
+          "alias": "philosophy",
+          "sample_len": 311,
+          "acc,none": 0.4340836012861736,
+          "acc_stderr,none": 0.028150232244535566
+        },
+        "mmlu_prehistory": {
+          "name": "mmlu_prehistory",
+          "alias": "prehistory",
+          "sample_len": 324,
+          "acc,none": 0.43209876543209874,
+          "acc_stderr,none": 0.027563010971606728
+        },
+        "mmlu_professional_law": {
+          "name": "mmlu_professional_law",
+          "alias": "professional_law",
+          "sample_len": 1534,
+          "acc,none": 0.33572359843546284,
+          "acc_stderr,none": 0.012061304157664569
+        },
+        "mmlu_world_religions": {
+          "name": "mmlu_world_religions",
+          "alias": "world_religions",
+          "sample_len": 171,
+          "acc,none": 0.47953216374269003,
+          "acc_stderr,none": 0.03831610532821936
+        },
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.375557917109458,
+          "acc_stderr,none": 0.006948651974286641,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      },
+      "groups": {
+        "mmlu_humanities": {
+          "alias": "humanities",
+          "name": "mmlu_humanities",
+          "sample_len": 4705,
+          "acc,none": 0.375557917109458,
+          "acc_stderr,none": 0.006948651974286641,
+          "sample_count": {
+            "acc,none": 4705
+          }
+        }
+      }
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,107 @@
+{
+  "configuration": {
+    "model_id": "tomg-group-umd/huginn-0125",
+    "device": "cuda:0",
+    "recurrence": 64,
+    "candidate_batch_sizes": [
+      128,
+      64,
+      32,
+      16,
+      8,
+      4,
+      2,
+      1
+    ],
+    "probe_examples": 20,
+    "max_memory_fraction": 0.9,
+    "created_at": "2026-11-01T20:42:45.225715+00:00"
+  },
+  "tasks": {
+    "arc_challenge": {
+      "chosen_batch_size": 128,
+      "attempts": [
+        {
+          "batch_size": 128,
+          "status": "safe",
+          "peak_gib": 12.360618591308594,
+          "memory_fraction": 0.27842966679131975,
+          "elapsed_seconds": 108.86031110398471,
+          "examples": 128,
+          "probe_task": "arc_challenge"
+        }
+      ]
+    },
+    "openbookqa": {
+      "chosen_batch_size": 128,
+      "attempts": [
+        {
+          "batch_size": 128,
+          "status": "safe",
+          "peak_gib": 11.32945442199707,
+          "memory_fraction": 0.2552021321863417,
+          "elapsed_seconds": 46.3191473595798,
+          "examples": 128,
+          "probe_task": "openbookqa"
+        }
+      ]
+    },
+    "hellaswag": {
+      "chosen_batch_size": 128,
+      "attempts": [
+        {
+          "batch_size": 128,
+          "status": "safe",
+          "peak_gib": 12.923123359680176,
+          "memory_fraction": 0.29110039310402663,
+          "elapsed_seconds": 86.25695829279721,
+          "examples": 128,
+          "probe_task": "hellaswag"
+        }
+      ]
+    },
+    "winogrande": {
+      "chosen_batch_size": 128,
+      "attempts": [
+        {
+          "batch_size": 128,
+          "status": "safe",
+          "peak_gib": 9.235595703125,
+          "memory_fraction": 0.2080368239861855,
+          "elapsed_seconds": 33.60324242711067,
+          "examples": 128,
+          "probe_task": "winogrande"
+        }
+      ]
+    },
+    "mmlu_humanities": {
+      "chosen_batch_size": 32,
+      "attempts": [
+        {
+          "batch_size": 128,
+          "status": "out_of_memory",
+          "elapsed_seconds": 17.576022312045097,
+          "examples": 128,
+          "probe_task": "mmlu_professional_law"
+        },
+        {
+          "batch_size": 64,
+          "status": "out_of_memory",
+          "elapsed_seconds": 258.28580806031823,
+          "examples": 64,
+          "probe_task": "mmlu_professional_law"
+        },
+        {
+          "batch_size": 32,
+          "status": "safe",
+          "peak_gib": 37.64271783828735,
+          "memory_fraction": 0.8479227238840341,
+          "elapsed_seconds": 131.42597044073045,
+          "examples": 32,
+          "probe_task": "mmlu_professional_law"
+        }
+      ]
+    }
+  },
+  "updated_runner": "/net/mraid20/ifs/wisdom/groups/vinkerg/shahar_avni_folder/recurrent-pretraining/evaluations/run_recurrence_evaluations.py"
+}
