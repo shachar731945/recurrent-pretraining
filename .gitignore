@@ -34,7 +34,6 @@ mem_output/
 launch_scripts/ahans/archive
 
 # ignore triton benchmark runs
-*.html
 *.csv
 *.png
 # ignore traces
